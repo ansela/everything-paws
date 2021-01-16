@@ -1,4 +1,5 @@
 import {
+  Box,
   Container,
   Grid,
   makeStyles,
@@ -20,23 +21,29 @@ const Footer = () => {
   const classes = useStyles()
   return (
     <footer className={classes.footer}>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Grid container justify="space-evenly">
           <Grid item md={4} sm={12}>
-            <Typography variant="overline" color="primary">
-              Everything Is Pawsible Kennel
-            </Typography>
-            <Typography>Location, phone etc.</Typography>
+            <Box display="flex" flexDirection="column" alignItems="flex-start">
+              <Typography variant="overline" color="primary">
+                Everything Is Pawsible Kennel
+              </Typography>
+              <Typography>Location, phone etc.</Typography>
+            </Box>
           </Grid>
           <Grid item md={4} sm={12}>
-            <Typography variant="overline" color="primary">
-              Hours
-            </Typography>
+            <Box display="flex" flexDirection="column">
+              <Typography variant="overline" color="primary">
+                Hours
+              </Typography>
+            </Box>
           </Grid>
           <Grid item md={4} sm={12}>
-            <Typography variant="overline" color="primary">
-              Helpful Links
-            </Typography>
+            <Box display="flex" flexDirection="column">
+              <Typography variant="overline" color="primary">
+                Helpful Links
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
       </Container>

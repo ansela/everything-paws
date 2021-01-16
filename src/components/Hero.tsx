@@ -39,10 +39,20 @@ const Hero = () => {
         flexDirection="column"
         alignItems="center"
       >
-        <Typography variant="h2" component="h1" align="center">
+        <Typography
+          variant="h2"
+          component="h1"
+          align="center"
+          color="textPrimary"
+        >
           Welcome to Everything is Pawsible Kennel!
         </Typography>
-        <Button variant="outlined" color="default" className={classes.button}>
+        <Button
+          variant="outlined"
+          size="large"
+          color="secondary"
+          className={classes.button}
+        >
           View Services
         </Button>
       </Box>

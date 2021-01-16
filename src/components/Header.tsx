@@ -77,6 +77,10 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  activeLink: {
+    color: theme.palette.primary.main,
+    fontStyle: "italic",
+  },
 }))
 
 export default function PrimarySearchAppBar() {
@@ -162,22 +166,53 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Link component={RouterLink} to="/" color="textSecondary">
+            <Link
+              component={RouterLink}
+              to="/"
+              color="textSecondary"
+              exact
+              activeClassName={classes.activeLink}
+            >
               Home
             </Link>
-            <Link component={RouterLink} to="/about" color="textSecondary">
+            <Link
+              component={RouterLink}
+              to="/about"
+              color="textSecondary"
+              activeClassName={classes.activeLink}
+            >
               About
             </Link>
-            <Link component={RouterLink} to="/boarding" color="textSecondary">
+            <Link
+              component={RouterLink}
+              to="/boarding"
+              color="textSecondary"
+              activeClassName={classes.activeLink}
+            >
               Boarding
             </Link>
-            <Link component={RouterLink} to="/Daycare" color="textSecondary">
+            <Link
+              component={RouterLink}
+              to="/Daycare"
+              color="textSecondary"
+              activeClassName={classes.activeLink}
+            >
               Daycare
             </Link>
-            <Link component={RouterLink} to="/Grooming" color="textSecondary">
+            <Link
+              component={RouterLink}
+              to="/Grooming"
+              color="textSecondary"
+              activeClassName={classes.activeLink}
+            >
               Grooming
             </Link>
-            <Link component={RouterLink} to="/Training" color="textSecondary">
+            <Link
+              component={RouterLink}
+              to="/Training"
+              color="textSecondary"
+              activeClassName={classes.activeLink}
+            >
               Training
             </Link>
           </div>
