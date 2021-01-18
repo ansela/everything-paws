@@ -3,7 +3,9 @@ import * as React from "react"
 import { Switch, Route } from "react-router-dom"
 import About from "./pages/About"
 import Boarding from "./pages/Boarding"
+import Contact from "./pages/Contact"
 import Daycare from "./pages/Daycare"
+import Faq from "./pages/Faq"
 import Grooming from "./pages/Grooming"
 import Home from "./pages/Home"
 import Training from "./pages/Training"
@@ -26,6 +28,12 @@ const Body = () => {
         </Route>
         <Route path="/training">
           <Training />
+        </Route>
+        <Route path="/FAQ">
+          <Faq />
+        </Route>
+        <Route path="/Contact">
+          <Contact />
         </Route>
         <Route path="/">
           <Home />

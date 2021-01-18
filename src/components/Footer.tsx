@@ -7,11 +7,15 @@ import {
   Typography,
 } from "@material-ui/core"
 import * as React from "react"
+import ContactInfo from "./ContactInfo"
+import HelpfulLinks from "./HelpfulLinks"
+import Hours from "./Hours"
 
 const useStyles = makeStyles((theme: Theme) => ({
   footer: {
     position: "sticky",
     background: theme.palette.grey[900],
+    color: theme.palette.getContrastText(theme.palette.grey[900]),
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(6),
   },
@@ -28,7 +32,7 @@ const Footer = () => {
               <Typography variant="overline" color="primary">
                 Everything Is Pawsible Kennel
               </Typography>
-              <Typography>Location, phone etc.</Typography>
+              <ContactInfo />
             </Box>
           </Grid>
           <Grid item md={4} sm={12}>
@@ -36,6 +40,7 @@ const Footer = () => {
               <Typography variant="overline" color="primary">
                 Hours
               </Typography>
+              <Hours />
             </Box>
           </Grid>
           <Grid item md={4} sm={12}>
@@ -43,6 +48,7 @@ const Footer = () => {
               <Typography variant="overline" color="primary">
                 Helpful Links
               </Typography>
+              <HelpfulLinks />
             </Box>
           </Grid>
         </Grid>

@@ -11,6 +11,7 @@ import SearchIcon from "@material-ui/icons/Search"
 import MoreIcon from "@material-ui/icons/MoreVert"
 import Link from "@material-ui/core/Link"
 import { NavLink as RouterLink } from "react-router-dom"
+import { Page, pages } from "../constants"
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -108,36 +109,13 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem onClick={handleMobileMenuClose}>
-        <Link component={RouterLink} to="/">
-          Home
-        </Link>
-      </MenuItem>
-      <MenuItem onClick={handleMobileMenuClose}>
-        <Link component={RouterLink} to="/about">
-          About
-        </Link>
-      </MenuItem>
-      <MenuItem onClick={handleMobileMenuClose}>
-        <Link component={RouterLink} to="/boarding">
-          Boarding
-        </Link>
-      </MenuItem>
-      <MenuItem onClick={handleMobileMenuClose}>
-        <Link component={RouterLink} to="/daycare">
-          Daycare
-        </Link>
-      </MenuItem>
-      <MenuItem onClick={handleMobileMenuClose}>
-        <Link component={RouterLink} to="/grooming">
-          Grooming
-        </Link>
-      </MenuItem>
-      <MenuItem onClick={handleMobileMenuClose}>
-        <Link component={RouterLink} to="/training">
-          Training
-        </Link>
-      </MenuItem>
+      {pages.map((page: Page) => (
+        <MenuItem onClick={handleMobileMenuClose}>
+          <Link component={RouterLink} to={page.link}>
+            {page.title}
+          </Link>
+        </MenuItem>
+      ))}
     </Menu>
   )
 
@@ -166,55 +144,17 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Link
-              component={RouterLink}
-              to="/"
-              color="textSecondary"
-              exact
-              activeClassName={classes.activeLink}
-            >
-              Home
-            </Link>
-            <Link
-              component={RouterLink}
-              to="/about"
-              color="textSecondary"
-              activeClassName={classes.activeLink}
-            >
-              About
-            </Link>
-            <Link
-              component={RouterLink}
-              to="/boarding"
-              color="textSecondary"
-              activeClassName={classes.activeLink}
-            >
-              Boarding
-            </Link>
-            <Link
-              component={RouterLink}
-              to="/Daycare"
-              color="textSecondary"
-              activeClassName={classes.activeLink}
-            >
-              Daycare
-            </Link>
-            <Link
-              component={RouterLink}
-              to="/Grooming"
-              color="textSecondary"
-              activeClassName={classes.activeLink}
-            >
-              Grooming
-            </Link>
-            <Link
-              component={RouterLink}
-              to="/Training"
-              color="textSecondary"
-              activeClassName={classes.activeLink}
-            >
-              Training
-            </Link>
+            {pages.map((page: Page) => (
+              <Link
+                component={RouterLink}
+                to={page.link}
+                color="textSecondary"
+                exact={page.exact}
+                activeClassName={classes.activeLink}
+              >
+                {page.title}
+              </Link>
+            ))}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
