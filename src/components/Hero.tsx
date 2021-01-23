@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Grid,
   makeStyles,
   Theme,
@@ -29,6 +28,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     height: "100%",
     objectFit: "cover",
+    maxHeight: "75vh",
   },
   overlay: {
     background: `linear-gradient(to right, ${theme.palette.primary.dark} 40%, rgb(0,0,0,0))`,

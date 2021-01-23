@@ -4,6 +4,7 @@ import Hero from "../Hero"
 import pic from "../../img/cat.jpg"
 import Section from "../Section"
 import PageCard from "../PageCard"
+import PageTitle from "../PageTitle"
 
 const Home = () => {
   return (
@@ -34,14 +35,7 @@ const Home = () => {
           />
         </Box>
         <Divider />
-        <Typography
-          variant="h2"
-          gutterBottom
-          align="center"
-          color="textSecondary"
-        >
-          Services
-        </Typography>
+        <PageTitle title="Services" />
         <Grid container spacing={2}>
           <Grid item lg={3} md={6} sm={12}>
             <PageCard

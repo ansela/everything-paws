@@ -1,7 +1,13 @@
+import { Container } from "@material-ui/core"
 import * as React from "react"
+import PageTitle from "../PageTitle"
 
 const About = () => {
-  return <div>About</div>
+  return (
+    <Container maxWidth="md">
+      <PageTitle title="About Us" />
+    </Container>
+  )
 }
 
 export default About

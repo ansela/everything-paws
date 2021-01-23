@@ -1,10 +1,16 @@
 import {
   Box,
+  Card,
+  CardContent,
+  CardHeader,
+  CardMedia,
   Divider,
   makeStyles,
   Paper,
   Theme,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@material-ui/core"
 import clsx from "clsx"
 import * as React from "react"
@@ -18,18 +24,20 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: "50%",
     float: "right",
   },
-  img: {
+  card: {
     height: "300px",
     width: "50%",
     position: "absolute",
     top: "12.5%",
-    objectFit: "cover",
     left: theme.spacing(11),
+  },
+  img: {
+    height: "100%",
   },
   textReverse: {
     float: "left",
   },
-  imgReverse: {
+  cardReverse: {
     right: theme.spacing(11),
     left: "unset",
   },
@@ -48,13 +56,42 @@ interface Props {
 
 const Section = ({ pic, text, reverse, header }: Props) => {
   const classes = useStyles()
+  const theme = useTheme()
+  const smallWidth = useMediaQuery(theme.breakpoints.down("sm"))
+
+  if (smallWidth) {
+    return (
+      <Card>
+        <CardMedia src={pic} alt={pic} component="img" />
+        <CardContent>
+          <Typography
+            variant="h4"
+            component="h2"
+            color="primary"
+            gutterBottom
+            align="center"
+          >
+            {header}
+          </Typography>
+          <Divider variant="middle" className={classes.divider} />
+          <Typography variant="body1" color="textPrimary">
+            {text}
+          </Typography>
+        </CardContent>
+      </Card>
+    )
+  }
+
   return (
     <Box mx={6} position="relative">
-      <img
-        src={pic}
-        className={clsx(classes.img, reverse && classes.imgReverse)}
-        alt={pic}
-      />
+      <Card className={clsx(classes.card, reverse && classes.cardReverse)}>
+        <CardMedia
+          src={pic}
+          className={classes.img}
+          alt={pic}
+          component="img"
+        />
+      </Card>
       <Paper
         color="primary"
         className={clsx(classes.text, reverse && classes.textReverse)}

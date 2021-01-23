@@ -4,10 +4,8 @@ import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import IconButton from "@material-ui/core/IconButton"
 import Typography from "@material-ui/core/Typography"
-import InputBase from "@material-ui/core/InputBase"
 import MenuItem from "@material-ui/core/MenuItem"
 import Menu from "@material-ui/core/Menu"
-import SearchIcon from "@material-ui/icons/Search"
 import MoreIcon from "@material-ui/icons/MoreVert"
 import Link from "@material-ui/core/Link"
 import { NavLink as RouterLink } from "react-router-dom"
@@ -21,10 +19,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "block",
-    },
+    display: "block",
   },
   search: {
     position: "relative",
@@ -129,19 +124,7 @@ export default function PrimarySearchAppBar() {
           <Typography className={classes.title} variant="h6" noWrap>
             Everything Is Pawsible
           </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ "aria-label": "search" }}
-            />
-          </div>
+
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             {pages.map((page: Page) => (
