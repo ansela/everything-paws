@@ -15,6 +15,7 @@ const Services = () => {
             text="Facilities are available for dogs and cats of all sizes"
             pic={pic}
             to="/boarding"
+            hideButton
           />
         </Grid>
         <Grid item md={6} sm={12}>
@@ -23,6 +24,7 @@ const Services = () => {
             text="Bring your pets for a day full of play time and fun"
             pic={pic}
             to="/daycare"
+            hideButton
           />
         </Grid>
         <Grid item md={6} sm={12}>
@@ -31,6 +33,7 @@ const Services = () => {
             text="Our world class groomer is ready to transform your pets style"
             pic={pic}
             to="/grooming"
+            hideButton
           />
         </Grid>
         <Grid item md={6} sm={12}>
@@ -39,6 +42,7 @@ const Services = () => {
             text="Help your pet understand what is expected of them"
             pic={pic}
             to="/training"
+            hideButton
           />
         </Grid>
       </Grid>

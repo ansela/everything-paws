@@ -1,6 +1,7 @@
 import {
   Button,
   Card,
+  CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
@@ -14,11 +15,12 @@ interface Props {
   text: string
   pic: string
   to: string
+  hideButton?: boolean
 }
 
-const PageCard = ({ title, text, pic, to }: Props) => {
-  return (
-    <Card>
+const PageCard = ({ title, text, pic, to, hideButton = false }: Props) => {
+  const content = (
+    <>
       <CardMedia src={pic} title="pic" component="img" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
@@ -28,6 +30,22 @@ const PageCard = ({ title, text, pic, to }: Props) => {
           {text}
         </Typography>
       </CardContent>
+    </>
+  )
+
+  if (hideButton) {
+    return (
+      <Card>
+        <CardActionArea component={RouterLink} to={to}>
+          {content}
+        </CardActionArea>
+      </Card>
+    )
+  }
+
+  return (
+    <Card>
+      {content}
       <CardActions>
         <Button size="small" color="primary" component={RouterLink} to={to}>
           Learn More

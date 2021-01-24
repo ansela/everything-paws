@@ -32,7 +32,7 @@ export const getHelpfulLinks = (): Page[] => {
 }
 
 export const getHeaderLinks = (): Page[] => {
-  const links = ["Home", "Services", "Gallery", "FAQ", "Contact"]
+  const links = ["Home", "About", "Services", "Gallery", "FAQ", "Contact"]
 
   return pages.filter((page: Page) => links.includes(page.title))
 }

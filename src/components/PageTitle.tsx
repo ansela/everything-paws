@@ -1,4 +1,3 @@
-import { ReactComponent } from "*.svg"
 import { Typography } from "@material-ui/core"
 import React, { ReactElement } from "react"
 

@@ -14,7 +14,7 @@ import Training from "./pages/Training"
 
 const Body = () => {
   return (
-    <Box py={6}>
+    <Box py={6} flex="1">
       <Switch>
         <Route path="/about">
           <About />
