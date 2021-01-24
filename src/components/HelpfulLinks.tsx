@@ -1,17 +1,16 @@
 import { Link } from "@material-ui/core"
 import * as React from "react"
-import { Page, pages } from "../constants"
+import { getHelpfulLinks, Page } from "../constants"
 import { Link as RouterLink } from "react-router-dom"
 
-const links = ["Boarding", "Daycare", "Grooming", "Training", "FAQ", "Contact"]
-
-const helpfulPages = pages.filter((page: Page) => links.includes(page.title))
-
 const HelpfulLinks = () => {
+  const helpfulPages: Page[] = getHelpfulLinks()
+
   return (
     <>
       {helpfulPages.map((page: Page) => (
         <Link
+          key={page.title}
           component={RouterLink}
           gutterBottom
           to={page.link}

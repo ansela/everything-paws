@@ -9,7 +9,7 @@ import Menu from "@material-ui/core/Menu"
 import MoreIcon from "@material-ui/icons/MoreVert"
 import Link from "@material-ui/core/Link"
 import { NavLink as RouterLink } from "react-router-dom"
-import { Page, pages } from "../constants"
+import { getHeaderLinks, Page } from "../constants"
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -85,6 +85,8 @@ export default function PrimarySearchAppBar() {
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
 
+  const headerPages: Page[] = getHeaderLinks()
+
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null)
   }
@@ -104,7 +106,7 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      {pages.map((page: Page) => (
+      {headerPages.map((page: Page) => (
         <MenuItem onClick={handleMobileMenuClose}>
           <Link component={RouterLink} to={page.link}>
             {page.title}
@@ -127,7 +129,7 @@ export default function PrimarySearchAppBar() {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            {pages.map((page: Page) => (
+            {headerPages.map((page: Page) => (
               <Link
                 component={RouterLink}
                 to={page.link}

@@ -6,8 +6,10 @@ import Boarding from "./pages/Boarding"
 import Contact from "./pages/Contact"
 import Daycare from "./pages/Daycare"
 import Faq from "./pages/Faq"
+import Gallery from "./pages/Gallery"
 import Grooming from "./pages/Grooming"
 import Home from "./pages/Home"
+import Services from "./pages/Services"
 import Training from "./pages/Training"
 
 const Body = () => {
@@ -16,6 +18,12 @@ const Body = () => {
       <Switch>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/services">
+          <Services />
+        </Route>
+        <Route path="/gallery">
+          <Gallery />
         </Route>
         <Route path="/boarding">
           <Boarding />
