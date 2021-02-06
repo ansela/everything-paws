@@ -51,16 +51,17 @@ interface Props {
   text: string | React.ReactNode
   reverse?: boolean
   header: string
+  className?: string
 }
 
-const Section = ({ pic, text, reverse, header }: Props) => {
+const Section = ({ pic, text, reverse, header, className }: Props) => {
   const classes = useStyles()
   const theme = useTheme()
   const smallWidth = useMediaQuery(theme.breakpoints.down("sm"))
 
   if (smallWidth) {
     return (
-      <Card>
+      <Card className={className}>
         <CardMedia src={pic} alt={pic} component="img" />
         <CardContent>
           <Typography
@@ -82,7 +83,7 @@ const Section = ({ pic, text, reverse, header }: Props) => {
   }
 
   return (
-    <Box mx={6} position="relative">
+    <Box mx={6} position="relative" className={className}>
       <Card className={clsx(classes.card, reverse && classes.cardReverse)}>
         <CardMedia
           src={pic}
