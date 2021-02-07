@@ -61,7 +61,7 @@ const Section = ({ pic, text, reverse, header, className }: Props) => {
 
   if (smallWidth) {
     return (
-      <Card className={className}>
+      <Card>
         <CardMedia src={pic} alt={pic} component="img" />
         <CardContent>
           <Typography
@@ -83,7 +83,7 @@ const Section = ({ pic, text, reverse, header, className }: Props) => {
   }
 
   return (
-    <Box mx={6} position="relative" className={className}>
+    <Box m={6} position="relative">
       <Card className={clsx(classes.card, reverse && classes.cardReverse)}>
         <CardMedia
           src={pic}

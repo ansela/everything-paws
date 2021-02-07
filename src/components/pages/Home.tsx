@@ -36,8 +36,8 @@ const Home = () => {
         </Box>
         <Divider />
         <PageTitle title="Services" />
-        <Grid container spacing={2}>
-          <Grid item lg={3} md={6} sm={12}>
+        <Grid container spacing={5}>
+          <Grid item md={6} sm={12}>
             <PageCard
               title="Boarding"
               text="Facilities are available for dogs and cats of all sizes"
@@ -45,7 +45,7 @@ const Home = () => {
               to="/boarding"
             />
           </Grid>
-          <Grid item lg={3} md={6} sm={12}>
+          <Grid item md={6} sm={12}>
             <PageCard
               title="Daycare"
               text="Bring your pets for a day full of play time and fun"
@@ -53,7 +53,7 @@ const Home = () => {
               to="/daycare"
             />
           </Grid>
-          <Grid item lg={3} md={6} sm={12}>
+          <Grid item md={6} sm={12}>
             <PageCard
               title="Grooming"
               text="Our world class groomer is ready to transform your pets style"
@@ -61,7 +61,7 @@ const Home = () => {
               to="/grooming"
             />
           </Grid>
-          <Grid item lg={3} md={6} sm={12}>
+          <Grid item md={6} sm={12}>
             <PageCard
               title="Training"
               text="Help your pet understand what is expected of them"

@@ -1,6 +1,7 @@
 import {
   Box,
   Card,
+  CardContent,
   CardMedia,
   Container,
   Divider,
@@ -9,8 +10,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  makeStyles,
-  Theme,
   Typography,
 } from "@material-ui/core"
 import * as React from "react"
@@ -19,27 +18,17 @@ import pic from "../../img/cat.jpg"
 import Section from "../Section"
 import { Pets } from "@material-ui/icons"
 
-const useStyles = makeStyles((theme: Theme) => ({
-  section: {
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(3),
-  },
-}))
-
 const Boarding = () => {
-  const classes = useStyles()
   return (
     <Container maxWidth="lg">
       <PageTitle title="Boarding" />
-      <Box pt={6} display="flex" flexDirection="column">
+      <Box display="flex" flexDirection="column">
         <Section
-          className={classes.section}
           pic={pic}
           header="The Space"
           text="Our spacious kennels are cleaned once a day and have epoxy flooring to help keep them clean longer. The entire facility is air conditioned, so if it is raining or too hot to be out for long, they have an indoor area to play in."
         />
         <Section
-          className={classes.section}
           reverse
           pic={pic}
           header="The Details"
@@ -92,39 +81,46 @@ const Boarding = () => {
           <Grid item xs={12} md={6}>
             <Card>
               <CardMedia src={pic} title="pic" component="img" />
+              <CardContent>
+                <Typography variant="caption" color="textSecondary">
+                  Small, perfect for the smallest of our furry friends
+                </Typography>
+              </CardContent>
             </Card>
-            <Typography variant="caption" color="textSecondary">
-              Small, perfect for dogs under 25 pounds
-            </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
             <Card>
               <CardMedia src={pic} title="pic" component="img" />
+              <CardContent>
+                <Typography variant="caption" color="textSecondary">
+                  Medium, great for smaller to standard sized dogs
+                </Typography>
+              </CardContent>
             </Card>
-            <Typography variant="caption" color="textSecondary">
-              Medium, great for smaller to standard sized dogs
-            </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
             <Card>
               <CardMedia src={pic} title="pic" component="img" />
+              <CardContent>
+                <Typography variant="caption" color="textSecondary">
+                  Large, excellent for many fully grown dogs
+                </Typography>
+              </CardContent>
             </Card>
-            <Typography variant="caption" color="textSecondary">
-              Large, excellent for many fully grown dogs
-            </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
             <Card>
               <CardMedia src={pic} title="pic" component="img" />
+              <CardContent>
+                <Typography variant="caption" color="textSecondary">
+                  Extra Large, provides extra space for our extra big friends
+                </Typography>
+              </CardContent>
             </Card>
-            <Typography variant="caption" color="textSecondary">
-              Extra Large, provides extra space for our extra big friends
-            </Typography>
           </Grid>
         </Grid>
         <Divider />
         <Section
-          className={classes.section}
           reverse
           pic={pic}
           header="Cat Boarding"
