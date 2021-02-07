@@ -107,7 +107,7 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       {headerPages.map((page: Page) => (
-        <MenuItem onClick={handleMobileMenuClose}>
+        <MenuItem key={page.title} onClick={handleMobileMenuClose}>
           <Link component={RouterLink} to={page.link}>
             {page.title}
           </Link>
@@ -131,6 +131,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
             {headerPages.map((page: Page) => (
               <Link
+                key={page.title}
                 component={RouterLink}
                 to={page.link}
                 color="textSecondary"

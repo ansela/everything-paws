@@ -45,18 +45,30 @@ const Hero = () => {
   const classes = useStyles()
   const theme = useTheme()
   const big = useMediaQuery(theme.breakpoints.up("md"))
+  const medium = useMediaQuery(theme.breakpoints.up("sm"))
 
   const hours = (
-    <Grid container spacing={2} justify="space-evenly">
-      <Grid item>
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={6}>
         <Typography variant="h6">Hours</Typography>
         <Hours />
       </Grid>
-      <Grid item>
+      <Grid item xs={12} sm={6}>
         <Typography variant="h6">Contact</Typography>
         <ContactInfo />
       </Grid>
     </Grid>
+  )
+  const title = (
+    <Typography
+      variant="h2"
+      component="h1"
+      gutterBottom
+      align={medium ? "left" : "center"}
+      color={medium ? "inherit" : "primary"}
+    >
+      Welcome to Everything is Pawsible Kennel!
+    </Typography>
   )
   return (
     <>
@@ -71,14 +83,17 @@ const Hero = () => {
           maxWidth="700px"
           //   alignItems="center"
         >
-          <Typography variant="h2" component="h1" gutterBottom>
-            Welcome to Everything is Pawsible Kennel!
-          </Typography>
+          {medium && title}
           {big && hours}
         </Box>
         <img src={pic} className={classes.img} alt="hero" />
       </div>
-      {!big && <Box my={6}>{hours}</Box>}
+      {!big && (
+        <Box my={6} mx={2}>
+          {!medium && title}
+          {hours}
+        </Box>
+      )}
     </>
   )
 }
