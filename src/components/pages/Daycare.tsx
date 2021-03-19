@@ -2,6 +2,7 @@ import {
   Box,
   Container,
   Divider,
+  Grid,
   List,
   ListItem,
   ListItemIcon,
@@ -54,39 +55,69 @@ const Daycare = () => {
             </>
           }
         />
-        <Typography
-          variant="h4"
-          component="h2"
-          color="primary"
-          gutterBottom
-          align="center"
-        >
-          Vaccinations Required
-        </Typography>
-        <Typography variant="body1" align="center">
-          Without these vaccinations, we will be unable to accept your pet for
-          any service. Proof of vaccination is required during check-in.
-        </Typography>
-        <List aria-label="list of required vaccinations">
-          <ListItem>
-            <ListItemIcon>
-              <Pets color="primary" />
-            </ListItemIcon>
-            <ListItemText primary="Rabies" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Pets color="primary" />
-            </ListItemIcon>
-            <ListItemText primary="Distemper/parvo" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Pets color="primary" />
-            </ListItemIcon>
-            <ListItemText primary="Bordetella" />
-          </ListItem>
-        </List>
+        <Grid container>
+          <Grid item md={6} sm={12}>
+            <Typography
+              variant="h4"
+              component="h2"
+              color="primary"
+              gutterBottom
+              align="center"
+            >
+              Vaccinations Required
+            </Typography>
+            <Typography variant="body1" align="center">
+              Without these vaccinations, we will be unable to accept your pet
+              for any service. Proof of vaccination is required during check-in.
+            </Typography>
+            <List aria-label="list of required vaccinations">
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="Rabies" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="Distemper/parvo" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="Bordetella" />
+              </ListItem>
+            </List>
+          </Grid>
+          <Grid item md={6} sm={12}>
+            <Typography
+              variant="h4"
+              component="h2"
+              color="primary"
+              gutterBottom
+              align="center"
+            >
+              Pricing
+            </Typography>
+            <List aria-label="list of required vaccinations">
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="$30 per day" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="$15 per extra dog" />
+              </ListItem>
+            </List>
+          </Grid>
+        </Grid>
+
         <Divider />
         <Section
           pic={pic}

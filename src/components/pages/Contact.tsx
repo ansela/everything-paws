@@ -12,6 +12,8 @@ import {
 import { Business, Email, Phone } from "@material-ui/icons"
 import * as React from "react"
 import { useState } from "react"
+import { emailAddress, phoneNumber } from "../../constants"
+import sendEmail from "../../services/sendEmail"
 import PageTitle from "../PageTitle"
 
 const useStyles = makeStyles({
@@ -37,6 +39,12 @@ const Contact = () => {
       ...values,
       [id]: value,
     })
+  }
+
+  const handleSendEmail = () => {
+    console.log("sending email with info", values)
+    const { name, email, subject, message } = values
+    sendEmail(name, subject, message, email)
   }
 
   return (
@@ -71,7 +79,7 @@ const Contact = () => {
                 <Phone color="primary" />
               </Grid>
               <Grid item>
-                <Typography>(555) 555-5555</Typography>
+                <Typography>{phoneNumber}</Typography>
               </Grid>
             </Grid>
             <Grid item container spacing={1}>
@@ -79,7 +87,7 @@ const Contact = () => {
                 <Email color="primary" />
               </Grid>
               <Grid item>
-                <Typography>test@example.com</Typography>
+                <Typography>{emailAddress}</Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -139,7 +147,12 @@ const Contact = () => {
         </Grid>
         <Grid item xs={12}>
           <Box width="100%" display="flex" justifyContent="flex-end">
-            <Button variant="contained" color="primary" size="large">
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={handleSendEmail}
+            >
               Submit
             </Button>
           </Box>

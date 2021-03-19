@@ -1,5 +1,6 @@
 import { Typography, Link } from "@material-ui/core"
 import * as React from "react"
+import { emailAddress, phoneNumber } from "../constants"
 
 const ContactInfo = () => {
   return (
@@ -11,7 +12,7 @@ const ContactInfo = () => {
         color="inherit"
         display="block"
       >
-        (555) 555-5555
+        {phoneNumber}
       </Link>
       <Typography variant="overline">Email</Typography>
       <Link
@@ -20,7 +21,7 @@ const ContactInfo = () => {
         display="block"
         gutterBottom
       >
-        test@example.com
+        {emailAddress}
       </Link>
       <Typography variant="overline">Address</Typography>
       <Typography>925 Eighth Ave S</Typography>
