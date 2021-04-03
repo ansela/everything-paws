@@ -84,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
     "& a": {
       padding: theme.spacing(1),
     },
+    zIndex: 100,
   },
   sectionMobile: {
     display: "flex",
@@ -105,6 +106,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },
+    zIndex: 100,
   },
   button: {
     marginLeft: theme.spacing(0.5),
