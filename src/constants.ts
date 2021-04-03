@@ -116,7 +116,7 @@ export const faqs: FAQ[] = [
   {
     question: "Can I bring a bed if I want to? ",
     answer:
-      "Yes, you can bring your dog’s own bed or blanket, though we recommend a blanket as its easier cleaned if they were to have an accident.    ",
+      "Yes, you can bring your dog’s own bed or blanket, though we recommend a blanket as its easier cleaned if they were to have an accident.",
   },
   {
     question: "What NOT TO BRING: ",

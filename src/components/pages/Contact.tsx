@@ -1,51 +1,57 @@
 import {
   Box,
   Button,
+  // Box,
+  // Button,
   Card,
   CardMedia,
   Container,
   Grid,
   makeStyles,
-  TextField,
+  // TextField,
   Typography,
 } from "@material-ui/core"
 import { Business, Email, Phone } from "@material-ui/icons"
-import * as React from "react"
-import { useState } from "react"
+import React from "react"
+// import { useState } from "react"
 import { emailAddress, phoneNumber } from "../../constants"
-import sendEmail from "../../services/sendEmail"
+// import sendEmail from "../../services/sendEmail"
 import PageTitle from "../PageTitle"
 
 const useStyles = makeStyles({
   iframe: {
     border: 0,
   },
+  bigIcons: {
+    width: "2em",
+    height: "2em",
+  },
 })
 
 const Contact = () => {
   const classes = useStyles()
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
+  // const [values, setValues] = useState({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  // })
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
-  ) => {
-    const { id, value } = e.target
-    setValues({
-      ...values,
-      [id]: value,
-    })
-  }
+  // const handleChange = (
+  //   e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  // ) => {
+  //   const { id, value } = e.target
+  //   setValues({
+  //     ...values,
+  //     [id]: value,
+  //   })
+  // }
 
-  const handleSendEmail = () => {
-    console.log("sending email with info", values)
-    const { name, email, subject, message } = values
-    sendEmail(name, subject, message, email)
-  }
+  // const handleSendEmail = () => {
+  //   console.log("sending email with info", values)
+  //   const { name, email, subject, message } = values
+  //   sendEmail(name, subject, message, email)
+  // }
 
   return (
     <Container maxWidth="lg">
@@ -63,36 +69,69 @@ const Contact = () => {
             />
           </Card>
         </Grid>
-        <Grid item md={12} lg={3}>
-          <Grid container spacing={2} direction="column">
-            <Grid item container spacing={1}>
+        <Grid item xs={12}>
+          <Grid container spacing={2} justify="center">
+            <Grid
+              item
+              xs={12}
+              md={4}
+              container
+              spacing={3}
+              direction="column"
+              alignItems="center"
+              alignContent="center"
+            >
               <Grid item>
-                <Business color="primary" />
+                <Business color="primary" className={classes.bigIcons} />
               </Grid>
               <Grid item>
-                <Typography>925 Eighth Ave S</Typography>
-                <Typography>Jacksonville Beach, Florida</Typography>
+                <Typography variant="h6" color="textSecondary" align="center">
+                  925 8th Ave S
+                </Typography>
+                <Typography variant="h6" color="textSecondary" align="center">
+                  Jacksonville Beach, Florida
+                </Typography>
               </Grid>
             </Grid>
-            <Grid item container spacing={1}>
+            <Grid
+              item
+              xs={12}
+              md={4}
+              container
+              spacing={3}
+              direction="column"
+              alignItems="center"
+            >
               <Grid item>
-                <Phone color="primary" />
+                <Phone color="primary" className={classes.bigIcons} />
               </Grid>
               <Grid item>
-                <Typography>{phoneNumber}</Typography>
+                <Typography variant="h6" color="textSecondary" align="center">
+                  {phoneNumber}
+                </Typography>
               </Grid>
             </Grid>
-            <Grid item container spacing={1}>
+            <Grid
+              item
+              xs={12}
+              md={4}
+              container
+              spacing={3}
+              direction="column"
+              alignItems="center"
+            >
               <Grid item>
-                <Email color="primary" />
+                <Email color="primary" className={classes.bigIcons} />
               </Grid>
               <Grid item>
-                <Typography>{emailAddress}</Typography>
+                <Typography variant="h6" color="textSecondary" align="center">
+                  {emailAddress}
+                </Typography>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
-        <Grid
+        {/* <Grid
           item
           xs={12}
           md={6}
@@ -154,6 +193,19 @@ const Contact = () => {
               onClick={handleSendEmail}
             >
               Submit
+            </Button>
+          </Box>
+        </Grid>*/}
+        <Grid item xs={12}>
+          <Box textAlign="center">
+            <Button
+              color="primary"
+              size="large"
+              variant="contained"
+              href="https://everythingpaws.gingrapp.com/front_end/facility"
+              target="_blank"
+            >
+              Contact Us
             </Button>
           </Box>
         </Grid>

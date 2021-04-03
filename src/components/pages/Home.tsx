@@ -20,7 +20,7 @@ const Home = () => {
               <>
                 Our beautiful pet friendly facility is located at{" "}
                 <Typography color="primary" component="span">
-                  925 Eighth Ave S
+                  925 8th Ave S
                 </Typography>{" "}
                 in Jacksonville Beach, Florida.
               </>

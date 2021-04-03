@@ -82,11 +82,11 @@ const Training = () => {
             About Our Facility
           </Typography>
           <Typography variant="body1">
-            Our indoor training facility includes # square feet of space, with a
-            maximum class size of # dogs. Dogs will learn basic commands such as
-            sit, stay, and lay down, as well as how to interact with other dogs
-            and people. (Add some more information here about the facility.
-            Consider expanding this section to talk about the classes
+            Our indoor training facility includes 1,200 square feet of space,
+            with a maximum class size of # dogs. Dogs will learn basic commands
+            such as sit, stay, and lay down, as well as how to interact with
+            other dogs and people. (Add some more information here about the
+            facility. Consider expanding this section to talk about the classes
             themselves, how long are they, what is the format etc.)
           </Typography>
         </Grid>

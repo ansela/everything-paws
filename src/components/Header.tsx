@@ -124,14 +124,6 @@ export default function PrimarySearchAppBar() {
     if (location.pathname !== "/") history.push("/")
   }
 
-  const handleLogIn = () => {
-    console.log("waiting for link")
-  }
-
-  const handleLiveView = () => {
-    window.open("http://173.165.199.137:8080", "_blank")
-  }
-
   const mobileMenuId = "primary-search-account-menu-mobile"
   const renderMobileMenu = (
     <Menu
@@ -155,7 +147,8 @@ export default function PrimarySearchAppBar() {
           size="small"
           color="primary"
           variant="outlined"
-          onClick={handleLogIn}
+          href="https://everythingpaws.gingrapp.com/front_end/login/email"
+          target="_blank"
         >
           Log In
         </Button>
@@ -165,7 +158,8 @@ export default function PrimarySearchAppBar() {
           size="small"
           color="default"
           variant="outlined"
-          onClick={handleLiveView}
+          href="http://173.165.199.137:8080"
+          target="_blank"
         >
           Live View
         </Button>
@@ -211,7 +205,8 @@ export default function PrimarySearchAppBar() {
               color="primary"
               variant="outlined"
               className={classes.button}
-              onClick={handleLogIn}
+              href="https://everythingpaws.gingrapp.com/front_end/login/email"
+              target="_blank"
             >
               Log In
             </Button>
@@ -220,7 +215,8 @@ export default function PrimarySearchAppBar() {
               color="default"
               variant="outlined"
               className={classes.button}
-              onClick={handleLiveView}
+              href="http://173.165.199.137:8080"
+              target="_blank"
             >
               Live View
             </Button>

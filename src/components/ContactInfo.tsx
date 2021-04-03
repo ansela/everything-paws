@@ -24,7 +24,7 @@ const ContactInfo = () => {
         {emailAddress}
       </Link>
       <Typography variant="overline">Address</Typography>
-      <Typography>925 Eighth Ave S</Typography>
+      <Typography>925 8th Ave S</Typography>
       <Typography gutterBottom>Jacksonville Beach, Florida</Typography>
     </>
   )
