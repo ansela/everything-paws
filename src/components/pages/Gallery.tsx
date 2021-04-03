@@ -1,7 +1,7 @@
 import { Container, makeStyles, Theme } from "@material-ui/core"
 import React, { useCallback, useState } from "react"
 import Gallery from "react-photo-gallery"
-import { galleryPics, getGalleryPics } from "../../constants"
+import { galleryPics } from "../../constants"
 import Carousel, { Modal, ModalGateway } from "react-images"
 import PageTitle from "../PageTitle"
 
@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme: Theme) => ({
 const PhotoGallery = () => {
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
-  const photos = getGalleryPics()
   const classes = useStyles()
 
   const openLightbox = useCallback((event, { photo, index }) => {
