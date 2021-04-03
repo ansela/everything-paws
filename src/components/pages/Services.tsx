@@ -3,6 +3,8 @@ import React from "react"
 import PageTitle from "../PageTitle"
 import pic from "../../img/cat.jpg"
 import PageCard from "../PageCard"
+import boardingPic from "../../img/medium1.jpg"
+import daycarePic from "../../img/outdoor-large1.jpg"
 
 const Services = () => {
   return (
@@ -13,7 +15,7 @@ const Services = () => {
           <PageCard
             title="Boarding"
             text="Facilities are available for dogs and cats of all sizes"
-            pic={pic}
+            pic={boardingPic}
             to="/boarding"
             hideButton
           />
@@ -22,7 +24,7 @@ const Services = () => {
           <PageCard
             title="Daycare"
             text="Bring your pets for a day full of play time and fun"
-            pic={pic}
+            pic={daycarePic}
             to="/daycare"
             hideButton
           />

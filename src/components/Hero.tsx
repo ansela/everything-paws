@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@material-ui/core"
 import * as React from "react"
-import pic from "../img/cat.jpg"
+import pic from "../img/reception.jpg"
 import ContactInfo from "./ContactInfo"
 import Hours from "./Hours"
 
@@ -73,7 +73,7 @@ const Hero = () => {
   return (
     <>
       <div className={classes.root}>
-        <div className={classes.overlay}></div>
+        {medium && <div className={classes.overlay} />}
         <Box
           width={big ? "55%" : "60%"}
           position="absolute"

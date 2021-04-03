@@ -18,6 +18,10 @@ import PageTitle from "../PageTitle"
 import pic from "../../img/cat.jpg"
 import Section from "../Section"
 import { Pets } from "@material-ui/icons"
+import detailsPic from "../../img/large1.jpg"
+import spacePic from "../../img/indoor1.jpg"
+import mediumPic from "../../img/medium3.jpg"
+import largePic from "../../img/large2.jpg"
 
 const useStyles = makeStyles({
   card: {
@@ -32,13 +36,13 @@ const Boarding = () => {
       <PageTitle title="Boarding" />
       <Box display="flex" flexDirection="column">
         <Section
-          pic={pic}
+          pic={spacePic}
           header="The Space"
           text="Our spacious kennels are cleaned once a day and have epoxy flooring to help keep them clean longer. The entire facility is air conditioned, so if it is raining or too hot to be out for long, they have an indoor area to play in."
         />
         <Section
           reverse
-          pic={pic}
+          pic={detailsPic}
           header="The Details"
           text="We have a stereo system so your pet will have music to listen to at night to keep them relaxed. Security cameras will show you how your pup is doing throughout the day. All pets will have fresh water available at all times and meals can be given three times a day along with any medication needed."
         />
@@ -118,8 +122,8 @@ const Boarding = () => {
         <Typography variant="h5" component="h3" align="center" gutterBottom>
           All kennels contain a raised bed for your dog to relax upon
         </Typography>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
+        <Grid container spacing={8}>
+          {/* <Grid item xs={12} md={4}>
             <Card className={classes.card}>
               <CardMedia src={pic} title="pic" component="img" />
               <CardContent>
@@ -128,10 +132,10 @@ const Boarding = () => {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
-          <Grid item xs={12} md={4}>
+          </Grid> */}
+          <Grid item xs={12} md={6}>
             <Card className={classes.card}>
-              <CardMedia src={pic} title="pic" component="img" />
+              <CardMedia src={mediumPic} title="pic" component="img" />
               <CardContent>
                 <Typography variant="caption" color="textSecondary">
                   Medium, 3 feet by 5 feet kennel, great for smaller to standard
@@ -140,9 +144,9 @@ const Boarding = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
             <Card className={classes.card}>
-              <CardMedia src={pic} title="pic" component="img" />
+              <CardMedia src={largePic} title="pic" component="img" />
               <CardContent>
                 <Typography variant="caption" color="textSecondary">
                   Large, 4 feet by 6 feet kennel, excellent for many fully grown

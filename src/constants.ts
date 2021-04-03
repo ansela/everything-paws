@@ -1,4 +1,21 @@
 import pic from "./img/cat.jpg"
+import facility1 from "./img/facility.jpg"
+import facility2 from "./img/facility2.jpg"
+import indoor1 from "./img/indoor1.jpg"
+import indoor2 from "./img/indoor2.jpg"
+import large1 from "./img/large1.jpg"
+import large2 from "./img/large2.jpg"
+import medium1 from "./img/medium1.jpg"
+import medium2 from "./img/medium2.jpg"
+import medium3 from "./img/medium3.jpg"
+import outdoorLarge1 from "./img/outdoor-large1.jpg"
+import outdoorLarge2 from "./img/outdoor-large2.jpg"
+import outdoorLarge3 from "./img/outdoor-large3.jpg"
+import outdoorLarge4 from "./img/outdoor-large4.jpg"
+import outdoorLarge5 from "./img/outdoor-large5.jpg"
+import outdoorSmall1 from "./img/outdoor-small1.jpg"
+import outdoorSmall2 from "./img/outdoor-small2.jpg"
+import reception from "./img/reception.jpg"
 export interface Page {
   title: string
   link: string
@@ -44,6 +61,26 @@ export const getGalleryPics = () => {
   }
   return tiles
 }
+
+export const galleryPics = [
+  { src: facility1, width: 1, height: 1, title: "The Facility" },
+  { src: facility2, width: 1, height: 1, title: "The Facility" },
+  { src: indoor1, width: 1, height: 1, title: "Indoor Play Area" },
+  { src: indoor2, width: 1, height: 1, title: "Indoor Play Area" },
+  { src: large1, width: 1, height: 1, title: "Large Kennels" },
+  { src: large2, width: 1, height: 1, title: "Large Kennels" },
+  { src: medium1, width: 1, height: 1, title: "Medium Kennels" },
+  { src: medium2, width: 1, height: 1, title: "Medium Kennels" },
+  { src: medium3, width: 1, height: 1, title: "Medium Kennels" },
+  { src: outdoorLarge1, width: 1, height: 1, title: "Large Outdoor Play Area" },
+  { src: outdoorLarge2, width: 1, height: 1, title: "Large Outdoor Play Area" },
+  { src: outdoorLarge3, width: 1, height: 1, title: "Large Outdoor Play Area" },
+  { src: outdoorLarge4, width: 1, height: 1, title: "Large Outdoor Play Area" },
+  { src: outdoorLarge5, width: 1, height: 1, title: "Large Outdoor Play Area" },
+  { src: outdoorSmall1, width: 1, height: 1, title: "Small Outdoor Play Area" },
+  { src: outdoorSmall2, width: 1, height: 1, title: "Small Outdoor Play Area" },
+  { src: reception, width: 1, height: 1, title: "Reception Area" },
+]
 
 export const phoneNumber = "(904) 716-8293"
 export const emailAddress = "test@example.com"
