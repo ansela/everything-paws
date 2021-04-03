@@ -200,7 +200,6 @@ export default function PrimarySearchAppBar() {
               onClick={handleLogoClick}
             />
           </Box>
-
           <div className={classes.sectionDesktop}>
             {headerPages.map((page: Page) => (
               <Link
