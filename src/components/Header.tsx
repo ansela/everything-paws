@@ -17,11 +17,21 @@ import { getHeaderLinks, Page } from "../constants"
 import logo from "../img/logo.jpg"
 import words from "../img/logo-words.jpg"
 import clsx from "clsx"
-import { Button } from "@material-ui/core"
+import { Box, Button } from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
   header: {
     justifyContent: "space-between",
+  },
+  headerText: {
+    [theme.breakpoints.up("lg")]: {
+      position: "absolute",
+      width: "100%",
+      textAlign: "center",
+    },
+    [theme.breakpoints.down("md")]: {
+      flex: 1,
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -180,12 +190,14 @@ export default function PrimarySearchAppBar() {
             className={clsx(classes.img, classes.logo)}
             onClick={handleLogoClick}
           />
-          <img
-            src={words}
-            alt="Everything is Pawsible"
-            className={classes.img}
-            onClick={handleLogoClick}
-          />
+          <Box className={classes.headerText}>
+            <img
+              src={words}
+              alt="Everything is Pawsible"
+              className={classes.img}
+              onClick={handleLogoClick}
+            />
+          </Box>
 
           <div className={classes.sectionDesktop}>
             {headerPages.map((page: Page) => (
