@@ -11,9 +11,11 @@ import {
 } from "@material-ui/core"
 import * as React from "react"
 import PageTitle from "../PageTitle"
-import pic from "../../img/cat.jpg"
 import Section from "../Section"
 import { Pets } from "@material-ui/icons"
+import detailsPic from "../../img/outdoor-large5.jpg"
+import outdoorPic from "../../img/outdoor-large2.jpg"
+import indoorPic from "../../img/indoor2.jpg"
 
 const Daycare = () => {
   return (
@@ -21,7 +23,7 @@ const Daycare = () => {
       <PageTitle title="Daycare" />
       <Box display="flex" flexDirection="column">
         <Section
-          pic={pic}
+          pic={detailsPic}
           header="The Details"
           text={
             <>
@@ -120,13 +122,13 @@ const Daycare = () => {
 
         <Divider />
         <Section
-          pic={pic}
+          pic={outdoorPic}
           header="Outdoor Space"
           text="Your dogs will have ample room to run around, play, and release all of their daily energy in our outdoor play facility. Over 6,000 square feet of state-of-the-art synthetic turf allows all dogs room to play with others, or do their own thing and enjoy the outdoor air. We maintain 3 water stations, along with a shaded areas, so no dog risks becoming dehydrated or overheated. An entertaining splash pad is available for those dogs who enjoy the water and three pools have water changed every day for those dogs who like to take a dip!"
         />
         <Section
           reverse
-          pic={pic}
+          pic={indoorPic}
           header="Indoor Space"
           text="There is 1,200 square feet of space inside our facility for your dogs to play, relax, and everything in between when the weather outside is bad. Our daycare team monitors all activities throughout the day to ensure your dogs have a happy and safe day! Indoor facilities include dog beds, toys, and an indoor tunnel."
         />
