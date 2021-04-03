@@ -5,13 +5,21 @@ import {
   Container,
   Divider,
   Grid,
+  makeStyles,
   Typography,
 } from "@material-ui/core"
 import * as React from "react"
 import PageTitle from "../PageTitle"
 import pic from "../../img/cat.jpg"
 
+const useStyles = makeStyles({
+  card: {
+    height: "100%",
+  },
+})
+
 const About = () => {
+  const classes = useStyles()
   return (
     <Container maxWidth="lg">
       <PageTitle title="About Us" />
@@ -33,12 +41,13 @@ const About = () => {
             can spend time with furry friends while treating them like her own!
             Melissa has worked at many different kennels in New York, California
             and Florida. She started her own business in 2016 doing pet sitting
-            and dog walking after graduating from Bergin University of Canine
-            Sciences. With the help of her loving family, she was finally able
-            to achieve her dream and open up a kennel! With both indoor, and
-            outdoor play areas, your dog will always be able to have fun! The
-            knowledgeable staff will treat your dogs like family while they are
-            here!
+            and dog walking after graduating from Niagara University with a
+            Bachelor of Science degree in Biology, and then from Bergin
+            University of Canine Sciences. With the help of her loving family,
+            she was finally able to achieve her dream and open up a kennel! With
+            both indoor and outdoor play areas, your dog will always be able to
+            have fun! The knowledgeable staff will treat your dogs like family
+            while they are here!
           </Typography>
         </Grid>
       </Grid>
@@ -53,47 +62,34 @@ const About = () => {
         Our Team
       </Typography>
       <Grid container spacing={3}>
-        <Grid item xs={12} md={3}>
-          <Card>
+        <Grid item xs={12} md={4}>
+          <Card className={classes.card}>
             <CardMedia component="img" src={pic} />
             <CardContent>
               <Typography variant="overline" color="primary">
-                Kennel Staff
+                Owner & Operator
               </Typography>
               <Typography variant="h5" component="h3">
-                Harry Potter
+                Missy Ansell
               </Typography>
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={3}>
-          <Card>
+        <Grid item xs={12} md={4}>
+          <Card className={classes.card}>
             <CardMedia component="img" src={pic} />
             <CardContent>
               <Typography variant="overline" color="primary">
-                Kennel Staff
+                Dog Play Area Coordinator
               </Typography>
               <Typography variant="h5" component="h3">
-                Ron Weasley
+                Julie Bolling
               </Typography>
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={3}>
-          <Card>
-            <CardMedia component="img" src={pic} />
-            <CardContent>
-              <Typography variant="overline" color="primary">
-                Resident Groomer
-              </Typography>
-              <Typography variant="h5" component="h3">
-                Hermione Granger
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Card>
+        <Grid item xs={12} md={4}>
+          <Card className={classes.card}>
             <CardMedia component="img" src={pic} />
             <CardContent>
               <Typography variant="overline" color="primary">

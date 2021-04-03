@@ -3,17 +3,25 @@ import { fade, makeStyles } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import IconButton from "@material-ui/core/IconButton"
-import Typography from "@material-ui/core/Typography"
 import MenuItem from "@material-ui/core/MenuItem"
 import Menu from "@material-ui/core/Menu"
 import MoreIcon from "@material-ui/icons/MoreVert"
 import Link from "@material-ui/core/Link"
-import { NavLink as RouterLink } from "react-router-dom"
+import {
+  NavLink as RouterLink,
+  useHistory,
+  useLocation,
+} from "react-router-dom"
 import { getHeaderLinks, Page } from "../constants"
 
+import logo from "../img/logo.jpg"
+import words from "../img/logo-words.jpg"
+import clsx from "clsx"
+import { Button } from "@material-ui/core"
+
 const useStyles = makeStyles((theme) => ({
-  grow: {
-    flexGrow: 1,
+  header: {
+    justifyContent: "space-between",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -77,10 +85,27 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontStyle: "italic",
   },
+  img: {
+    height: theme.spacing(7),
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
+  logo: {
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
+  },
+  button: {
+    marginLeft: theme.spacing(0.5),
+    marginRight: theme.spacing(0.5),
+  },
 }))
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles()
+  const history = useHistory()
+  const location = useLocation()
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
@@ -93,6 +118,10 @@ export default function PrimarySearchAppBar() {
 
   const handleMobileMenuOpen = (event: any) => {
     setMobileMoreAnchorEl(event.currentTarget)
+  }
+
+  const handleLogoClick = () => {
+    if (location.pathname !== "/") history.push("/")
   }
 
   const mobileMenuId = "primary-search-account-menu-mobile"
@@ -113,21 +142,51 @@ export default function PrimarySearchAppBar() {
           </Link>
         </MenuItem>
       ))}
+      <MenuItem onClick={handleMobileMenuClose}>
+        <Button
+          size="small"
+          color="primary"
+          variant="outlined"
+          href="https://everythingpaws.gingrapp.com/front_end/login/email"
+          target="_blank"
+        >
+          Log In
+        </Button>
+      </MenuItem>
+      <MenuItem onClick={handleMobileMenuClose}>
+        <Button
+          size="small"
+          color="default"
+          variant="outlined"
+          href="http://173.165.199.137:8080"
+          target="_blank"
+        >
+          Live View
+        </Button>
+      </MenuItem>
     </Menu>
   )
 
   return (
     <nav>
-      <AppBar position="static" style={{ height: "25px" }}>
-        <Toolbar></Toolbar>
+      <AppBar position="relative" style={{ height: "25px" }}>
+        <Toolbar style={{ minHeight: "25px" }}></Toolbar>
       </AppBar>
       <AppBar position="static" color="transparent">
-        <Toolbar>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Everything Is Pawsible
-          </Typography>
+        <Toolbar className={classes.header}>
+          <img
+            src={logo}
+            alt="Everything is Pawsible logo"
+            className={clsx(classes.img, classes.logo)}
+            onClick={handleLogoClick}
+          />
+          <img
+            src={words}
+            alt="Everything is Pawsible"
+            className={classes.img}
+            onClick={handleLogoClick}
+          />
 
-          <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             {headerPages.map((page: Page) => (
               <Link
@@ -141,6 +200,26 @@ export default function PrimarySearchAppBar() {
                 {page.title}
               </Link>
             ))}
+            <Button
+              size="small"
+              color="primary"
+              variant="outlined"
+              className={classes.button}
+              href="https://everythingpaws.gingrapp.com/front_end/login/email"
+              target="_blank"
+            >
+              Log In
+            </Button>
+            <Button
+              size="small"
+              color="default"
+              variant="outlined"
+              className={classes.button}
+              href="http://173.165.199.137:8080"
+              target="_blank"
+            >
+              Live View
+            </Button>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

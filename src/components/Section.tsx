@@ -61,24 +61,26 @@ const Section = ({ pic, text, reverse, header, className }: Props) => {
 
   if (smallWidth) {
     return (
-      <Card>
-        <CardMedia src={pic} alt={pic} component="img" />
-        <CardContent>
-          <Typography
-            variant="h4"
-            component="h2"
-            color="primary"
-            gutterBottom
-            align="center"
-          >
-            {header}
-          </Typography>
-          <Divider variant="middle" className={classes.divider} />
-          <Typography variant="body1" color="textPrimary">
-            {text}
-          </Typography>
-        </CardContent>
-      </Card>
+      <Box py={2}>
+        <Card>
+          <CardMedia src={pic} alt={pic} component="img" />
+          <CardContent>
+            <Typography
+              variant="h4"
+              component="h2"
+              color="primary"
+              gutterBottom
+              align="center"
+            >
+              {header}
+            </Typography>
+            <Divider variant="middle" className={classes.divider} />
+            <Typography variant="body1" color="textPrimary">
+              {text}
+            </Typography>
+          </CardContent>
+        </Card>
+      </Box>
     )
   }
 

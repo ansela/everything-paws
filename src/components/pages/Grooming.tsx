@@ -1,34 +1,37 @@
 import {
-  Card,
-  CardMedia,
+  // Card,
+  // CardMedia,
   Container,
   Divider,
-  Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  ListSubheader,
+  // Grid,
+  // List,
+  // ListItem,
+  // ListItemIcon,
+  // ListItemText,
+  // ListSubheader,
   Typography,
 } from "@material-ui/core"
 import * as React from "react"
 import PageTitle from "../PageTitle"
-import pic from "../../img/cat.jpg"
-import { Pets } from "@material-ui/icons"
+// import pic from "../../img/cat.jpg"
+// import { Pets } from "@material-ui/icons"
 
 const Grooming = () => {
   return (
     <Container maxWidth="lg">
       <PageTitle title="Grooming" />
       <Typography align="center" variant="body1">
-        Our facility includes a # square foot, state of the art, grooming
-        facility. Bring your pets in for a grooming appointment, or schedule
-        grooming during your dog's boarding stay so they come home nice and
-        fresh. Whatever you decide, our groomer can help to ensure your dog
-        looks their best at any time!
+        Our facility includes a 500 square foot grooming facility. Bring your
+        pets in for a grooming appointment, or schedule grooming during your
+        dog's boarding stay so they come home nice and fresh. Whatever you
+        decide, our groomer can help to ensure your dog looks their best at any
+        time!
       </Typography>
       <Divider />
-      <Grid container spacing={6}>
+      <Typography align="center" variant="h3" color="primary">
+        Look for details in the near future!
+      </Typography>
+      {/* <Grid container spacing={6}>
         <Grid item xs={12} md={6}>
           <Card>
             <CardMedia component="img" src={pic} />
@@ -173,7 +176,7 @@ const Grooming = () => {
             <CardMedia component="img" src={pic} />
           </Card>
         </Grid>
-      </Grid>
+      </Grid> */}
     </Container>
   )
 }

@@ -2,6 +2,7 @@ import {
   Box,
   Container,
   Divider,
+  Grid,
   List,
   ListItem,
   ListItemIcon,
@@ -43,61 +44,91 @@ const Daycare = () => {
                 Drop Off
               </Typography>
               <Typography variant="body2" gutterBottom>
-                6:00 am - 10:00 am
+                7:00 am - 12:30 am
               </Typography>
               <Typography variant="overline" color="textSecondary">
                 Pick Up
               </Typography>
               <Typography variant="body2" gutterBottom>
-                3:00 pm - 7:00 pm
+                3:30 pm - 7:00 pm
               </Typography>
             </>
           }
         />
-        <Typography
-          variant="h4"
-          component="h2"
-          color="primary"
-          gutterBottom
-          align="center"
-        >
-          Vaccinations Required
-        </Typography>
-        <Typography variant="body1" align="center">
-          Without these vaccinations, we will be unable to accept your pet for
-          any service. Proof of vaccination is required during check-in.
-        </Typography>
-        <List aria-label="list of required vaccinations">
-          <ListItem>
-            <ListItemIcon>
-              <Pets color="primary" />
-            </ListItemIcon>
-            <ListItemText primary="Rabies" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Pets color="primary" />
-            </ListItemIcon>
-            <ListItemText primary="Distemper/parvo" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Pets color="primary" />
-            </ListItemIcon>
-            <ListItemText primary="Bordetella" />
-          </ListItem>
-        </List>
+        <Grid container>
+          <Grid item md={6} sm={12}>
+            <Typography
+              variant="h4"
+              component="h2"
+              color="primary"
+              gutterBottom
+              align="center"
+            >
+              Vaccinations Required
+            </Typography>
+            <Typography variant="body1" align="center">
+              Without these vaccinations, we will be unable to accept your pet
+              for any service. Proof of vaccination is required during check-in.
+            </Typography>
+            <List aria-label="list of required vaccinations">
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="Rabies" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="Distemper/parvo" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="Bordetella" />
+              </ListItem>
+            </List>
+          </Grid>
+          <Grid item md={6} sm={12}>
+            <Typography
+              variant="h4"
+              component="h2"
+              color="primary"
+              gutterBottom
+              align="center"
+            >
+              Pricing
+            </Typography>
+            <List aria-label="list of required vaccinations">
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="$30 per day" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="$15 per extra dog" />
+              </ListItem>
+            </List>
+          </Grid>
+        </Grid>
+
         <Divider />
         <Section
           pic={pic}
           header="Outdoor Space"
-          text="Your dogs will have ample room to run around, play, and release all of their daily energy in our outdoor play facility. Over <#> square feet of space allows all dogs room to play with others, or do their own thing and enjoy the outdoor air. We maintain <#> water stations, along with a canopied shady area, so no dog risks becoming dehydrated or overheated. "
+          text="Your dogs will have ample room to run around, play, and release all of their daily energy in our outdoor play facility. Over 6,000 square feet of state-of-the-art synthetic turf allows all dogs room to play with others, or do their own thing and enjoy the outdoor air. We maintain 3 water stations, along with a shaded areas, so no dog risks becoming dehydrated or overheated. An entertaining splash pad is available for those dogs who enjoy the water and three pools have water changed every day for those dogs who like to take a dip!"
         />
         <Section
           reverse
           pic={pic}
           header="Indoor Space"
-          text="There is plenty of space inside our facility for your dogs to play, relax, and everything in between. Our daycare team monitors all activities throughout the day to ensure your dogs have a happy and safe day! Indoor facilities include <insert details about indoor facilities here please>"
+          text="There is 1,200 square feet of space inside our facility for your dogs to play, relax, and everything in between when the weather outside is bad. Our daycare team monitors all activities throughout the day to ensure your dogs have a happy and safe day! Indoor facilities include dog beds, toys, and an indoor tunnel."
         />
       </Box>
     </Container>
