@@ -57,7 +57,7 @@ const Home = () => {
               to="/daycare"
             />
           </Grid>
-          <Grid item md={6} sm={12}>
+          {/* <Grid item md={6} sm={12}>
             <PageCard
               title="Grooming"
               text="Our world class groomer is ready to transform your pets style"
@@ -72,7 +72,7 @@ const Home = () => {
               pic={pic}
               to="/training"
             />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </>

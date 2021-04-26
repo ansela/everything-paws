@@ -103,7 +103,7 @@ const Boarding = () => {
                 <ListItemIcon>
                   <Pets color="primary" />
                 </ListItemIcon>
-                <ListItemText primary="$25 per extra dog" />
+                <ListItemText primary="$30 per extra dog" />
               </ListItem>
             </List>
           </Grid>
@@ -156,13 +156,13 @@ const Boarding = () => {
             </Card>
           </Grid>
         </Grid>
-        <Divider />
+        {/* <Divider />
         <Section
           reverse
           pic={pic}
           header="Cat Boarding"
           text="We also offer Cat boarding! We have a room specifically for cats right by the lobby so they can relax away from all the noise of the dogs. Each cat will get their own suite with litter box changed every day, food and water up to three times a day, and any medication they may need."
-        />
+        /> */}
       </Box>
     </Container>
   )

@@ -10,6 +10,7 @@ import * as React from "react"
 import ContactInfo from "./ContactInfo"
 import HelpfulLinks from "./HelpfulLinks"
 import Hours from "./Hours"
+import SocialMedia from "./SocialMedia"
 
 const useStyles = makeStyles((theme: Theme) => ({
   footer: {
@@ -53,6 +54,7 @@ const Footer = () => {
           </Grid>
         </Grid>
       </Container>
+      <SocialMedia />
     </footer>
   )
 }

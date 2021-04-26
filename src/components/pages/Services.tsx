@@ -29,7 +29,7 @@ const Services = () => {
             hideButton
           />
         </Grid>
-        <Grid item md={6} sm={12}>
+        {/* <Grid item md={6} sm={12}>
           <PageCard
             title="Grooming"
             text="Our world class groomer is ready to transform your pets style"
@@ -46,7 +46,7 @@ const Services = () => {
             to="/training"
             hideButton
           />
-        </Grid>
+        </Grid> */}
       </Grid>
     </Container>
   )

@@ -25,7 +25,7 @@ const ContactInfo = () => {
       </Link>
       <Typography variant="overline">Address</Typography>
       <Typography>925 8th Ave S</Typography>
-      <Typography gutterBottom>Jacksonville Beach, Florida</Typography>
+      <Typography gutterBottom>Jacksonville Beach, FL 32250</Typography>
     </>
   )
 }

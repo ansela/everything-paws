@@ -114,7 +114,13 @@ const Daycare = () => {
                 <ListItemIcon>
                   <Pets color="primary" />
                 </ListItemIcon>
-                <ListItemText primary="$15 per extra dog" />
+                <ListItemText primary="$20 per extra dog" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <Pets color="primary" />
+                </ListItemIcon>
+                <ListItemText primary="Daycare package - 10 days of daycare for $270" />
               </ListItem>
             </List>
           </Grid>

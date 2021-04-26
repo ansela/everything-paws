@@ -89,7 +89,7 @@ const Contact = () => {
                   925 8th Ave S
                 </Typography>
                 <Typography variant="h6" color="textSecondary" align="center">
-                  Jacksonville Beach, Florida
+                  Jacksonville Beach, FL 32250
                 </Typography>
               </Grid>
             </Grid>

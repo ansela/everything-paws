@@ -40,7 +40,7 @@ const PhotoGallery = () => {
               views={galleryPics.map((x) => ({
                 ...x,
                 source: x.src,
-                caption: x.title,
+                caption: x.title || "",
               }))}
             />
           </Modal>

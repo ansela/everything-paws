@@ -1,21 +1,23 @@
 import pic from "./img/cat.jpg"
-import facility1 from "./img/facility.jpg"
-import facility2 from "./img/facility2.jpg"
-import indoor1 from "./img/indoor1.jpg"
-import indoor2 from "./img/indoor2.jpg"
-import large1 from "./img/large1.jpg"
-import large2 from "./img/large2.jpg"
-import medium1 from "./img/medium1.jpg"
-import medium2 from "./img/medium2.jpg"
-import medium3 from "./img/medium3.jpg"
-import outdoorLarge1 from "./img/outdoor-large1.jpg"
-import outdoorLarge2 from "./img/outdoor-large2.jpg"
-import outdoorLarge3 from "./img/outdoor-large3.jpg"
-import outdoorLarge4 from "./img/outdoor-large4.jpg"
-import outdoorLarge5 from "./img/outdoor-large5.jpg"
-import outdoorSmall1 from "./img/outdoor-small1.jpg"
-import outdoorSmall2 from "./img/outdoor-small2.jpg"
-import reception from "./img/reception.jpg"
+import dogs1 from "./img/dogs1.jpeg"
+import dogs2 from "./img/dogs2.jpeg"
+import dogs3 from "./img/dogs3.jpeg"
+import dogs4 from "./img/dogs4.jpeg"
+import dogs5 from "./img/dogs5.jpeg"
+import dogs6 from "./img/dogs6.jpeg"
+import dogs7 from "./img/dogs7.jpeg"
+import dogs8 from "./img/dogs8.jpeg"
+import dogs9 from "./img/dogs9.jpeg"
+import dogs10 from "./img/dogs10.jpeg"
+import dogs11 from "./img/dogs11.jpeg"
+import dogs12 from "./img/dogs12.jpeg"
+import dogs13 from "./img/dogs13.jpeg"
+import dogs14 from "./img/dogs14.jpeg"
+import dogs15 from "./img/dogs15.jpeg"
+import dogs16 from "./img/dogs16.jpeg"
+import family1 from "./img/family1.jpeg"
+import everyone1 from "./img/everyone1.jpeg"
+import missy1 from "./img/missy1.jpeg"
 export interface Page {
   title: string
   link: string
@@ -39,8 +41,9 @@ export const getHelpfulLinks = (): Page[] => {
   const links = [
     "Boarding",
     "Daycare",
-    "Grooming",
-    "Training",
+    "Gallery",
+    // "Grooming",
+    // "Training",
     "FAQ",
     "Contact",
   ]
@@ -62,28 +65,37 @@ export const getGalleryPics = () => {
   return tiles
 }
 
-export const galleryPics = [
-  { src: facility1, width: 1, height: 1, title: "The Facility" },
-  { src: facility2, width: 1, height: 1, title: "The Facility" },
-  { src: indoor1, width: 1, height: 1, title: "Indoor Play Area" },
-  { src: indoor2, width: 1, height: 1, title: "Indoor Play Area" },
-  { src: large1, width: 1, height: 1, title: "Large Kennels" },
-  { src: large2, width: 1, height: 1, title: "Large Kennels" },
-  { src: medium1, width: 1, height: 1, title: "Medium Kennels" },
-  { src: medium2, width: 1, height: 1, title: "Medium Kennels" },
-  { src: medium3, width: 1, height: 1, title: "Medium Kennels" },
-  { src: outdoorLarge1, width: 1, height: 1, title: "Large Outdoor Play Area" },
-  { src: outdoorLarge2, width: 1, height: 1, title: "Large Outdoor Play Area" },
-  { src: outdoorLarge3, width: 1, height: 1, title: "Large Outdoor Play Area" },
-  { src: outdoorLarge4, width: 1, height: 1, title: "Large Outdoor Play Area" },
-  { src: outdoorLarge5, width: 1, height: 1, title: "Large Outdoor Play Area" },
-  { src: outdoorSmall1, width: 1, height: 1, title: "Small Outdoor Play Area" },
-  { src: outdoorSmall2, width: 1, height: 1, title: "Small Outdoor Play Area" },
-  { src: reception, width: 1, height: 1, title: "Reception Area" },
+export interface GalleryPic {
+  src: string
+  width: number
+  height: number
+  title?: string
+}
+
+export const galleryPics: GalleryPic[] = [
+  { src: dogs1, width: 1, height: 1 },
+  { src: dogs2, width: 1, height: 1 },
+  { src: dogs3, width: 1, height: 1 },
+  { src: dogs4, width: 1, height: 1 },
+  { src: dogs5, width: 1, height: 1 },
+  { src: dogs6, width: 1, height: 1 },
+  { src: dogs7, width: 1, height: 1 },
+  { src: dogs8, width: 1, height: 1 },
+  { src: dogs9, width: 1, height: 1 },
+  { src: dogs10, width: 1, height: 1 },
+  { src: dogs11, width: 1, height: 1 },
+  { src: dogs12, width: 1, height: 1 },
+  { src: dogs13, width: 1, height: 1 },
+  { src: dogs14, width: 1, height: 1 },
+  { src: dogs15, width: 1, height: 1 },
+  { src: dogs16, width: 1, height: 1 },
+  { src: missy1, width: 1, height: 1 },
+  { src: everyone1, width: 1, height: 1 },
+  { src: family1, width: 1, height: 1 },
 ]
 
-export const phoneNumber = "(904) 716-8293"
-export const emailAddress = "test@example.com"
+export const phoneNumber = "(904) 595-2640"
+export const emailAddress = "everythingispawsiblejax@gmail.com"
 
 export interface FAQ {
   question: string
