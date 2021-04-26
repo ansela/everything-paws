@@ -15,7 +15,6 @@ import {
 } from "@material-ui/core"
 import * as React from "react"
 import PageTitle from "../PageTitle"
-import pic from "../../img/cat.jpg"
 import Section from "../Section"
 import { Pets } from "@material-ui/icons"
 import detailsPic from "../../img/large1.jpg"

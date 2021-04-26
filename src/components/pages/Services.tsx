@@ -1,7 +1,6 @@
 import { Container, Grid } from "@material-ui/core"
 import React from "react"
 import PageTitle from "../PageTitle"
-import pic from "../../img/cat.jpg"
 import PageCard from "../PageCard"
 import boardingPic from "../../img/medium1.jpg"
 import daycarePic from "../../img/outdoor-large1.jpg"

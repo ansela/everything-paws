@@ -1,7 +1,6 @@
 import { Box, Container, Divider, Grid, Typography } from "@material-ui/core"
 import * as React from "react"
 import Hero from "../Hero"
-import pic from "../../img/cat.jpg"
 import facilityPic from "../../img/facility.jpg"
 import mapPic from "../../img/map.png"
 import boardingPic from "../../img/medium1.jpg"
