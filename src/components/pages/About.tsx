@@ -10,9 +10,9 @@ import {
 } from "@material-ui/core"
 import * as React from "react"
 import PageTitle from "../PageTitle"
-import missyBioPic from "../../img/missy-bio.jpeg"
-import dadBioPic from "../../img/dad-bio.jpeg"
-import julieBioPic from "../../img/julie-bio.jpeg"
+import missyBioPic from "../../img/missy-bio.jpg"
+import dadBioPic from "../../img/dad-bio.jpg"
+import julieBioPic from "../../img/julie-bio.jpg"
 import pic from "../../img/cat.jpg"
 
 const About = () => {
