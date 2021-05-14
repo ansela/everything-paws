@@ -7,7 +7,7 @@ const ContactInfo = () => {
     <>
       <Typography variant="overline">Phone</Typography>
       <Link
-        href="tel:+17168299205"
+        href="tel:+19045952640"
         gutterBottom
         color="inherit"
         display="block"
@@ -16,7 +16,7 @@ const ContactInfo = () => {
       </Link>
       <Typography variant="overline">Email</Typography>
       <Link
-        href="mailto:ashley.ansell@gmail.com"
+        href="mailto:everythingispawsiblejax@gmail.com"
         color="inherit"
         display="block"
         gutterBottom

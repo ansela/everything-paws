@@ -19,8 +19,8 @@ import Section from "../Section"
 import { Pets } from "@material-ui/icons"
 import detailsPic from "../../img/large1.jpg"
 import spacePic from "../../img/indoor1.jpg"
-import mediumPic from "../../img/medium3.jpg"
-import largePic from "../../img/large2.jpg"
+import mediumPic from "../../img/medium4.jpg"
+import largePic from "../../img/large3.jpg"
 
 const useStyles = makeStyles({
   card: {
