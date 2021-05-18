@@ -13,7 +13,7 @@ import PageTitle from "../PageTitle"
 import missyBioPic from "../../img/missy-bio.jpg"
 import dadBioPic from "../../img/dad-bio.jpg"
 import julieBioPic from "../../img/julie-bio.jpg"
-import pic from "../../img/cat.jpg"
+import daveBioPic from "../../img/dave-bio.jpg"
 
 const About = () => {
   const theme = useTheme()
@@ -133,12 +133,16 @@ const About = () => {
             Dave Bolling
           </Typography>
           <Typography variant="body1" align={small ? "left" : "right"}>
-            More Information about Dave coming soon!
+            Dave has always been passionate about animals since he was young. He
+            had many different kinds of dogs, but Vizsla's were always his
+            favorite. He's been friends with Craig and the Ansell family for
+            over 20 years, and is excited to help out with the kennel in any way
+            he can!
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>
           <Card>
-            <CardMedia component="img" src={pic} />
+            <CardMedia component="img" src={daveBioPic} />
           </Card>
         </Grid>
       </Grid>
