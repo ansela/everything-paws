@@ -15,7 +15,7 @@ const Hours = () => {
         Saturday
       </Typography>
       <Typography variant="caption">Boarding Only</Typography>
-      <Typography gutterBottom>9:00 am - 12:30 pm</Typography>
+      <Typography gutterBottom>7:00 am - 12:00 pm</Typography>
 
       <Typography variant="overline" component="div">
         Sunday

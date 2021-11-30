@@ -223,7 +223,7 @@ export default function PrimarySearchAppBar() {
             >
               Log In
             </Button>
-            <Button
+            {/* <Button
               size="small"
               color="default"
               variant="outlined"
@@ -232,7 +232,7 @@ export default function PrimarySearchAppBar() {
               target="_blank"
             >
               Live View
-            </Button>
+            </Button> */}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
