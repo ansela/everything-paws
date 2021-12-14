@@ -8,8 +8,7 @@ const Hours = () => {
         Monday - Friday
       </Typography>
       <Typography variant="caption">Daycare & Boarding</Typography>
-      <Typography>7:00 am - 12:30 pm</Typography>
-      <Typography gutterBottom>3:30 pm - 7:00 pm</Typography>
+      <Typography>7:00 am - 7:00 pm</Typography>
 
       <Typography variant="overline" component="div">
         Saturday
