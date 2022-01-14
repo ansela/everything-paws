@@ -12,7 +12,6 @@ import * as React from "react"
 import PageTitle from "../PageTitle"
 import missyBioPic from "../../img/missy-bio.jpg"
 import dadBioPic from "../../img/dad-bio.jpg"
-import julieBioPic from "../../img/julie-bio.jpg"
 import daveBioPic from "../../img/dave-bio.jpg"
 
 const About = () => {
@@ -58,7 +57,7 @@ const About = () => {
             align={small ? "left" : "right"}
             component="div"
           >
-            Dog Play Area Coordinator
+            Administration and Support
           </Typography>
           <Typography
             variant="h5"
@@ -66,40 +65,9 @@ const About = () => {
             gutterBottom
             align={small ? "left" : "right"}
           >
-            Julie Bolling
-          </Typography>
-          <Typography variant="body1" align={small ? "left" : "right"}>
-            Julie has been an animal lover since she was in diapers! She grew up
-            in Ponte Vedra Beach and graduated from the College of Journalism &
-            Communications at University of Florida where she focused on
-            Advertising, Sociology and Statistics. Julie moved to Minneapolis
-            after graduating where she worked in Healthcare and Sales...while
-            serving as a dog-sitter for coworkers and friends! Eventually she
-            found her way back to Florida and was thrilled when Missy asked her
-            to join the Everything Is Pawsible Team!
-          </Typography>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Card>
-            <CardMedia component="img" src={julieBioPic} />
-          </Card>
-        </Grid>
-      </Grid>
-      <Divider />
-      <Grid container spacing={6}>
-        <Grid item xs={12} md={6}>
-          <Card>
-            <CardMedia component="img" src={dadBioPic} />
-          </Card>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Typography variant="overline" color="primary">
-            Administration and Support
-          </Typography>
-          <Typography variant="h5" component="h2" gutterBottom>
             Craig Ansell
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" align={small ? "left" : "right"}>
             Craig is Missy's Dad. He has been a CPA for over 40 years, and has
             his own accounting business in Ponte Vedra Beach. Craig has owned
             dogs his entire life, and each one has been a poodle. Craig now has
@@ -112,38 +80,33 @@ const About = () => {
             stay at Everything is Pawsible.
           </Typography>
         </Grid>
+        <Grid item xs={12} md={6}>
+          <Card>
+            <CardMedia component="img" src={dadBioPic} />
+          </Card>
+        </Grid>
       </Grid>
       <Divider />
-      <Grid container spacing={6} direction={small ? "column-reverse" : "row"}>
+      <Grid container spacing={6}>
         <Grid item xs={12} md={6}>
-          <Typography
-            variant="overline"
-            color="primary"
-            align={small ? "left" : "right"}
-            component="div"
-          >
+          <Card>
+            <CardMedia component="img" src={daveBioPic} />
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Typography variant="overline" color="primary">
             Kennel Coordinator
           </Typography>
-          <Typography
-            variant="h5"
-            component="h2"
-            gutterBottom
-            align={small ? "left" : "right"}
-          >
+          <Typography variant="h5" component="h2" gutterBottom>
             Dave Bolling
           </Typography>
-          <Typography variant="body1" align={small ? "left" : "right"}>
+          <Typography variant="body1">
             Dave has always been passionate about animals since he was young. He
             had many different kinds of dogs, but Vizsla's were always his
             favorite. He's been friends with Craig and the Ansell family for
             over 20 years, and is excited to help out with the kennel in any way
             he can!
           </Typography>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Card>
-            <CardMedia component="img" src={daveBioPic} />
-          </Card>
         </Grid>
       </Grid>
       <Divider />

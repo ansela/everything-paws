@@ -1,11 +1,8 @@
 import pic from "./img/cat.jpg"
 import dogs1 from "./img/dogs1.jpg"
-import dogs2 from "./img/dogs2.jpg"
 import dogs3 from "./img/dogs3.jpg"
-import dogs4 from "./img/dogs4.jpg"
 import dogs5 from "./img/dogs5.jpg"
 import dogs6 from "./img/dogs6.jpg"
-import dogs7 from "./img/dogs7.jpg"
 import dogs8 from "./img/dogs8.jpg"
 import dogs9 from "./img/dogs9.jpg"
 import dogs10 from "./img/dogs10.jpg"
@@ -16,7 +13,6 @@ import dogs14 from "./img/dogs14.jpg"
 import dogs15 from "./img/dogs15.jpg"
 import dogs16 from "./img/dogs16.jpg"
 import family1 from "./img/family1.jpg"
-import everyone1 from "./img/everyone1.jpg"
 import missy1 from "./img/missy1.jpg"
 export interface Page {
   title: string
@@ -74,12 +70,9 @@ export interface GalleryPic {
 
 export const galleryPics: GalleryPic[] = [
   { src: dogs1, width: 1, height: 1 },
-  { src: dogs2, width: 1, height: 1 },
   { src: dogs3, width: 1, height: 1 },
-  { src: dogs4, width: 1, height: 1 },
   { src: dogs5, width: 1, height: 1 },
   { src: dogs6, width: 1, height: 1 },
-  { src: dogs7, width: 1, height: 1 },
   { src: dogs8, width: 1, height: 1 },
   { src: dogs9, width: 1, height: 1 },
   { src: dogs10, width: 1, height: 1 },
@@ -90,7 +83,6 @@ export const galleryPics: GalleryPic[] = [
   { src: dogs15, width: 1, height: 1 },
   { src: dogs16, width: 1, height: 1 },
   { src: missy1, width: 1, height: 1 },
-  { src: everyone1, width: 1, height: 1 },
   { src: family1, width: 1, height: 1 },
 ]
 
