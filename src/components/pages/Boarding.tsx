@@ -80,6 +80,19 @@ const Boarding = () => {
                 <ListItemText primary="Bordetella" />
               </ListItem>
             </List>
+            <Typography
+              variant="h4"
+              component="h2"
+              color="primary"
+              gutterBottom
+              align="center"
+            >
+              Additional Considerations
+            </Typography>
+            <Typography variant="body1" align="center">
+              All dogs 1 year and older <b>must</b> be spayed or neutered before
+              their boarding appointment.
+            </Typography>
           </Grid>
           <Grid item md={6} sm={12}>
             <Typography
@@ -91,18 +104,18 @@ const Boarding = () => {
             >
               Pricing
             </Typography>
-            <List aria-label="list of required vaccinations">
+            <List aria-label="pricing list">
               <ListItem>
                 <ListItemIcon>
                   <Pets color="primary" />
                 </ListItemIcon>
-                <ListItemText primary="$45 per day" />
+                <ListItemText primary="1 dog - $50 per day" />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
                   <Pets color="primary" />
                 </ListItemIcon>
-                <ListItemText primary="$30 per extra dog" />
+                <ListItemText primary="2 dogs - $80 per day" />
               </ListItem>
             </List>
           </Grid>

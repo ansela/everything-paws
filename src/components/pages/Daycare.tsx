@@ -46,7 +46,7 @@ const Daycare = () => {
                 Drop Off
               </Typography>
               <Typography variant="body2" gutterBottom>
-                7:00 am - 12:30 am
+                7:00 am - 12:30 pm
               </Typography>
               <Typography variant="overline" color="textSecondary">
                 Pick Up
@@ -92,6 +92,19 @@ const Daycare = () => {
                 <ListItemText primary="Bordetella" />
               </ListItem>
             </List>
+            <Typography
+              variant="h4"
+              component="h2"
+              color="primary"
+              gutterBottom
+              align="center"
+            >
+              Additional Considerations
+            </Typography>
+            <Typography variant="body1" align="center">
+              All dogs 1 year and older <b>must</b> be spayed or neutered before
+              their daycare appointment.
+            </Typography>
           </Grid>
           <Grid item md={6} sm={12}>
             <Typography
@@ -103,26 +116,109 @@ const Daycare = () => {
             >
               Pricing
             </Typography>
-            <List aria-label="list of required vaccinations">
-              <ListItem>
-                <ListItemIcon>
-                  <Pets color="primary" />
-                </ListItemIcon>
-                <ListItemText primary="$30 per day" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <Pets color="primary" />
-                </ListItemIcon>
-                <ListItemText primary="$20 per extra dog" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <Pets color="primary" />
-                </ListItemIcon>
-                <ListItemText primary="Daycare package - 10 days of daycare for $270" />
-              </ListItem>
-            </List>
+            <Grid container>
+              <Grid item md={6} sm={12}>
+                <Box marginBottom={2}>
+                  <Box marginLeft={2}>
+                    <Typography
+                      variant="h5"
+                      component="h3"
+                      color="textSecondary"
+                    >
+                      Full Day
+                    </Typography>
+                  </Box>
+                  <List aria-label="Full day pricing list">
+                    <ListItem>
+                      <ListItemIcon>
+                        <Pets color="primary" />
+                      </ListItemIcon>
+                      <ListItemText primary="1 dog - $35 per day" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <Pets color="primary" />
+                      </ListItemIcon>
+                      <ListItemText primary="2 dogs - $55 per day" />
+                    </ListItem>
+                  </List>
+                </Box>
+              </Grid>
+              <Grid item md={6} sm={12}>
+                <Box marginBottom={2}>
+                  <Box marginLeft={2}>
+                    <Typography
+                      variant="h5"
+                      component="h3"
+                      color="textSecondary"
+                      gutterBottom
+                    >
+                      Half Day
+                    </Typography>
+                    <Typography variant="body2">
+                      A half day of daycare is 6 hours or less
+                    </Typography>
+                  </Box>
+                  <List aria-label="Half day pricing list">
+                    <ListItem>
+                      <ListItemIcon>
+                        <Pets color="primary" />
+                      </ListItemIcon>
+                      <ListItemText primary="1 dog - $20 per day" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <Pets color="primary" />
+                      </ListItemIcon>
+                      <ListItemText primary="2 dogs - $30 per day" />
+                    </ListItem>
+                  </List>
+                </Box>
+              </Grid>
+              <Grid item md={6} sm={12}>
+                <Box marginBottom={2}>
+                  <Box marginLeft={2}>
+                    <Typography
+                      variant="h5"
+                      component="h3"
+                      color="textSecondary"
+                      gutterBottom
+                    >
+                      Daycare Packages
+                    </Typography>
+                    <Typography variant="body2">
+                      Each daycare package contains 10 days
+                    </Typography>
+                  </Box>
+                  <List aria-label="daycare package pricing list">
+                    <ListItem>
+                      <ListItemIcon>
+                        <Pets color="primary" />
+                      </ListItemIcon>
+                      <ListItemText primary="Full day, 1 dog - $315" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <Pets color="primary" />
+                      </ListItemIcon>
+                      <ListItemText primary="Full day, 2 dogs - $495" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <Pets color="primary" />
+                      </ListItemIcon>
+                      <ListItemText primary="Half day, 1 dog - $180" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <Pets color="primary" />
+                      </ListItemIcon>
+                      <ListItemText primary="Half day, 2 dogs - $270" />
+                    </ListItem>
+                  </List>
+                </Box>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
 

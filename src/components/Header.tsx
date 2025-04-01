@@ -165,17 +165,6 @@ export default function PrimarySearchAppBar() {
           Log In
         </Button>
       </MenuItem>
-      <MenuItem onClick={handleMobileMenuClose}>
-        <Button
-          size="small"
-          color="default"
-          variant="outlined"
-          href="http://173.165.199.137:8080"
-          target="_blank"
-        >
-          Live View
-        </Button>
-      </MenuItem>
     </Menu>
   )
 
